@@ -1,0 +1,32 @@
+.border1 {
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.border2 {
+    padding: 1rem;
+    border: 5px double var(--green);
+}
+
+.border3 {
+    padding: 1rem;
+    border: 2px dashed var(--red);
+}
+
+.border4 {
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 40px;
+}
+
+.border5 {
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 18px 56px 25px 4px;
+}
+
+.border6 {
+    padding: 1rem;
+    border: 2px solid var(--green);
+    border-radius: 0px 150px 150px 50px / 0px 30px 100px 30px;
+}

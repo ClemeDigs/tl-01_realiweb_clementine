@@ -1,0 +1,30 @@
+@import url(./bases/header.css);
+@import url(./bases/sections.css);
+@import url(./bases/footer.css);
+@import url(./bases/boutons.css);
+@import url(./bases/fonts.css);
+@import url(./bases/bases.css);
+@import url(./proprietes/animations-transitions.css);
+@import url(./proprietes/background.css);
+@import url(./proprietes/colors-gradients.css);
+@import url(./proprietes/filters-mix.css);
+@import url(./proprietes/transform-opacity.css);
+@import url(./proprietes/zindex.css);
+@import url(./proprietes/border.css);
+@import url(./proprietes/writing.css);
+
+
+/*----------VARIABLES----------*/
+
+:root {
+    background-image: url(../img/background.svg);
+    background-size: 500px;
+
+    --green: #71A167;
+    --blue: #1A91B2;
+    --yellow: #F6A415;
+    --purple: #B660A2;
+    --orange: #ED6E34;
+    --red: #ED6666;
+    --box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}

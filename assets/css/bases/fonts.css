@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/assets/fonts/nunito-variablefont_wght-webfont.woff2') format('woff2'),
+        url('/assets/fonts/nunito-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Marker';
+    src: url('/assets/fonts/permanentmarker-regular-webfont.woff2') format('woff2'),
+        url('/assets/fonts/permanentmarker-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Nunito;
+    font-weight: 600;
+}

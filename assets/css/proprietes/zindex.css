@@ -1,0 +1,64 @@
+#img-z-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    left: 50px;
+}
+
+#img-z-index img {
+    width: 100px;
+}
+
+#garcon-lunette1 {
+    position: relative;
+    left: 0px;
+}
+
+#fille-blonde1 {
+    position: relative;
+    left: -60px;
+}
+
+#garcon-roux1 {
+    position: relative;
+    left: -120px;
+}
+
+
+#garcon-lunette2 {
+    position: relative;
+    left: 0px;
+    z-index: 3;
+}
+
+#fille-blonde2 {
+    position: relative;
+    left: -60px;
+    z-index: 2;
+}
+
+#garcon-roux2 {
+    position: relative;
+    left: -120px;
+    z-index: 1;
+}
+
+
+#garcon-lunette3 {
+    position: relative;
+    left: 0px;
+    z-index: 2;
+}
+
+#fille-blonde3 {
+    position: relative;
+    left: -60px;
+    z-index: 3;
+}
+
+#garcon-roux3 {
+    position: relative;
+    left: -120px;
+    z-index: 1;
+}

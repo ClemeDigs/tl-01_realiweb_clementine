@@ -1,0 +1,28 @@
+.fixed-background {
+    background-image: url(/assets/img/crayon.jpg);
+    background-attachment: fixed;
+    background-size: 600px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 1rem;
+}
+
+.repeat-background {
+    background-image: url(/assets/img/crayon.jpg);
+    background-size: 300px;
+    background-repeat: repeat;
+    background-position: 150px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 1rem;
+}
+
+.cover-background {
+    background-image: url(/assets/img/crayon.jpg);
+    background-size: cover;
+    background-position: 150px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 1rem;
+}
+

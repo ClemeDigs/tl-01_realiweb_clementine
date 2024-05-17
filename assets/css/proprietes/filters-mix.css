@@ -1,0 +1,48 @@
+.img-filter {
+    width: 150px;
+}
+
+.flou {
+    filter: blur(3px);
+}
+
+.contraste {
+    filter: contrast(150%)
+}
+
+.gris {
+    filter: grayscale(80%);
+}
+
+.inverse {
+    filter: hue-rotate(90deg);
+}
+
+.ombre {
+    filter: drop-shadow(5px 5px rgb(123, 123, 123));
+}
+
+.sepia {
+    filter: sepia(80%);
+}
+
+.darken {
+    font-family: Marker;
+    font-size: 1.7rem;
+    mix-blend-mode: darken;
+    color: rgb(64, 15, 15);
+}
+
+.difference {
+    font-family: Marker;
+    font-size: 1.3rem;
+    mix-blend-mode: difference;
+    color: rgb(89, 143, 188);
+}
+
+.multiply {
+    font-family: Marker;
+    font-size: 1.3rem;
+    color: rgb(190, 4, 207);
+    mix-blend-mode: multiply;
+}

@@ -1,0 +1,31 @@
+.item.lightseagreen {
+    background-color: lightseagreen;
+}
+
+.item.rgb {
+    background-color: rgb(255, 183, 50);
+}
+
+.item.rgba {
+    background-color: rgba(146, 0, 169, 0.557);
+}
+
+.item.hex {
+    background-color:#FF2D54;
+}
+
+.item.gradient1 {
+    background: linear-gradient(var(--blue), var(--purple));
+}
+
+.item.gradient2 {
+    background: radial-gradient(var(--red), var(--yellow));
+}
+
+.item.gradient3 {
+    background: repeating-radial-gradient(var(--green), var(--orange) 30px);
+}
+
+.item.gradient4 {
+    background: conic-gradient(var(--yellow), var(--purple));
+}

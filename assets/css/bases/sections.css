@@ -1,0 +1,207 @@
+main {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+    /*----------SECTION-MAIN----------*/
+
+main > section {
+    margin: 0 auto;
+    border: 2px solid black;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+section header {
+    background-color: var(--green);
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    border-radius: 10px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: Marker;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0;
+}
+
+.div_section {
+    min-height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+h3 {
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: white;
+    transform: translateY(-50px);
+}
+
+.propriete {
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.propriete ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid div p {
+    max-width: 60%;
+}
+
+.grid div a {
+    color: var(--green);
+    transition: color 0.5s;
+}
+
+.grid div a:hover, .grid div a :focus {
+    color: var(--blue);
+}
+
+.item {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: var(--blue);
+    position: relative;
+}
+
+.code {
+    font-family: "DM Mono", monospace;
+    font-weight: 300;
+    padding: 0.5rem;
+    background-color: rgb(224, 224, 224);
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    overflow: auto; 
+}
+
+.grid .container-3 {
+    background-color: var(--yellow);
+    border-radius: 4px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid .container-4 {
+    background-color: var(--yellow);
+    border-radius: 4px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid .container-6 {
+    background-color: var(--yellow);
+    border-radius: 4px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.item-grid {
+    width: 50px;
+    height: 50px;
+    background-color: var(--purple);
+    border-radius: 4px;
+}
+
+.item.large-lego {
+    background-image: url(/assets/img/cubes.jpg);
+    background-size: 200px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > a {
+    color: var(--purple);
+    margin-top: 2rem;
+    transition: color 0.5s;
+}
+
+section > a:hover, section > a:focus {
+    color: var(--blue);
+}
+
+@media screen and (min-width:768px) {
+
+    .code.large {
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .code.large {
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .code.large {
+        max-width: 600px;
+    }
+
+    .grid2 {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}

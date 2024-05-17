@@ -1,0 +1,18 @@
+html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    font-family: Nunito;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}

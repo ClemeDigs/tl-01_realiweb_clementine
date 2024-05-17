@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://kit.fontawesome.com/59d9a3259e.js" crossorigin="anonymous"></script>
+    <script src="./app.js" defer></script>
+    <title>CSS 3</title>
+</head>
+<body>
+    <header>
+        <h1 id="h1">CSS 3 : Un jeu d'enfants !</h1>
+        <nav>
+            <ul>
+                <li><a href="#a">a</a></li>
+                <li><a href="#b">b</a></li>
+                <li><a href="#c">c</a></li>
+                <li><a href="#d">d</a></li>
+                <li><a href="#e">e</a></li>
+                <li><a href="#f">f</a></li>
+                <li><a href="#g">g</a></li>
+                <li><a href="#h">h</a></li>
+                <li><a href="#i">i</a></li>
+                <li><a href="#j">j</a></li>
+                <li><a href="#k">k</a></li>
+                <li><a href="#l">l</a></li>
+                <li><a href="#m">m</a></li>
+                <li><a href="#n">n</a></li>
+                <li><a href="#o">o</a></li>
+                <li><a href="#p">p</a></li>
+                <li><a href="#q">q</a></li>
+                <li><a href="#r">r</a></li>
+                <li><a href="#s">s</a></li>
+                <li><a href="#t">t</a></li>
+                <li><a href="#u">u</a></li>
+                <li><a href="#v">v</a></li>
+                <li><a href="#w">w</a></li>
+                <li><a href="#x">x</a></li>
+                <li><a href="#y">y</a></li>
+                <li><a href="#z">z</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="a">
+            <header>
+                <h2>a</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Animation</h3>
+                    <p>Les animations dans CSS permettent de faire bouger des éléments par des interpolations, en fonction des règles qu'on leur attribue. Les animations sont appliquées sur le carré bleu qui comporte les class item et animate.</p>
+                    <p>La propoiété "animation" peut attendre plusieurs valeurs: le nom de l'animation (obligatoire), la durée (obligatoire), le nombre de fois qu'elle sera répétée(obligatoire), la fonction de timing, la direction de l'animation...</p>
+                    <p>Pour faire fonctionner une animation, il faut la définir grace à des keyframes. On déclare les keyframes sous le nom de l'animation.</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Rebondir</h4>
+                            <div class="item animate-rebond"></div>
+                            <p class="code">.item.animate {
+animation: bounce 1s ease-in-out infinite; 
+} <br> <br>
+@keyframes bounce {
+    0%, 100% { <br>
+        left: -60px; 
+    } <br>
+    50% { <br>
+        left: 60px;
+    } <br>
+}
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Changer de couleur</h4>
+                            <div class="item animate-color"></div>
+                            <p class="code">.item.animate {
+animation: change-color 1s ease-in-out infinite; 
+} <br> <br>
+@keyframes change-color {
+    0%, 100% { <br>
+        background-color: blue; 
+    } <br>
+    50% { <br>
+        background-color: green;
+    } <br>
+}
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4>Un beau mélange !</h4>
+                            <div class="item animate-all"></div>
+                            <p class="code">.item.animate { <br>
+                                animation: all-change 1s ease-in-out infinite; 
+                                } <br> <br>
+                            
+                                @keyframes all-change {
+                                    0%, 100% { <br>
+                                        background-color: var(--blue); <br>
+                                        opacity: 100%; <br>
+                                        border-radius: 4px; <br>
+                                        transform: rotate(0deg) 
+                                    }<br>
+                                    50% { <br>
+                                        background-color: var(--red); <br>
+                                        opacity: 20%; <br>
+                                        border-radius: 100px; <br>
+                                        transform: rotate(45deg)
+                                    } <br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation">En savoir plus</a>
+                </section>
+            </div>
+
+        </section>
+
+        <section id="b">
+            <header>
+                <h2>b</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Background</h3>
+                    <p>CSS permet de faire beaucoup de chose avec le fond. On peut utiliser des images, les déformer, les répéter, les rendre fixes... Voici quelques options pssibles:</p>
+                    <div class="grid">
+                        <div class="fixed-background">
+                            <h4>Fond fixe</h4>
+                            <p>Pour cet exemple, on cible la div avec la class .fixed-background.</p>
+                            <p class="code">
+                                .fixed-background { <br>
+                                    background-image: url(); <br>
+                                    background-attachment: fixed; <br>
+                                    background-size: 200px; <br>
+                                }
+                            </p>
+                        </div>
+                        <div class="repeat-background">
+                            <h4>Fond qui se répète</h4>
+                            <p>Maintenant, essayons un fond qui se répète.</p>
+                            <p class="code">.repeat-background { <br>
+                                background-image: url(); <br>
+                                background-size: 300px; <br>
+                                background-repeat: repeat; <br>
+                                background-position: 150px; <br>
+                            }</p>
+                        </div>
+                        <div class="cover-background">
+                            <h4>Fond qui couvre tout</h4>
+                            <p>La valeur cover est très bien pensée, elle couvre la totalité de l'écran tout en restant la plus petite possible et sans être étirée.</p>
+                            <p class="code">.cover-background { <br>
+                                background-image: url(); <br>
+                                background-size: cover; <br>
+                            }</p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background">En savoir plus</a>
+                </section>
+
+                <section class="propriete">
+                    <h3>Border</h3>
+                    <p>Les bordures peuvent être très personnalisées dans CSS.</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Styles de bordures</h4>
+                            <p>Quand on définit une bordure, on dt choiri 3 paramètres : la largeur, le style et la couleur. Quelques exemples :</p>
+                            <p class="border1">
+                                Bordure simple
+                            </p>
+                            <p class="code">
+                                .border1 { <br>
+                                    border: 1px solid black; <br>
+                                }
+                            </p>
+                            <p class="border2">
+                                Bordure double
+                            </p>
+                            <p class="code">
+                                .border2 { <br>
+                                    border: 5px double green; <br>
+                                }
+                            </p>
+                            <p class="border3">
+                                Bordure pointillée
+                            </p>
+                            <p class="code">
+                                .border3 { <br>
+                                    border: 2px dashed red; <br>
+                                }
+                            </p>
+
+                        </div>
+                        <div>
+                            <h4>Border-radius</h4>
+                            <p>La propriété border-radius permet d'arrondir les coins. On peut définir plusieurs valeurs, de 1 à 4, qui correspondent à chaque coin. Une seule valeur = tous les coins, 2 valeurs = haut gauche et bas droit, 4 valeurs = haut gauche, haut droit, bas droit, bas gauche.</p>
+                            <p class="border4">Arrondi partout</p>
+                            <p class="code">
+                                .border4 { <br>
+                                    border: 2px solid black; <br>
+                                    border-radius: 40px; <br>
+                                }
+                            </p>
+                            <p class="border5">Forme étrange</p>
+                            <p class="code">
+                                .border5 { <br>
+                                border: 2px solid black; <br>
+                                border-radius: 18px 56px 25px 4px; <br>
+                            }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Générateur de bordures</h4>
+                            <p>Avec le générateur de bordures de MDN, on peut créer des bordure originales facilement.</p>
+                            <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator">Générateur de bordures</a>
+                            <p class="border6">Bordure générée</p>
+                            <p class="code">
+                                .border6 { <br>
+                                    border: 2px solid green;
+                                    border-radius: 0px 150px 150px 50px / 0px 30px 100px 30px; <br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border">En savoir plus</a>
+                </section>
+
+            </div>
+        </section>    
+
+        <section id="c">
+            <header>
+                <h2>c</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Couleurs</h3>
+                    <p>Les couleurs dans CSS sont de plus en plus variées et on peut les personnaliser à l'infini.</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Couleurs nommées</h4>
+                            <p>On peut choisir les couleurs en indiquand simplement leur nom (en anglais). Le choix est déjà très varié.</p>
+                            <div class="item lightseagreen"></div>
+                            <p class="code">
+                                .item.lightseagreen { <br>
+                                    background-color: lightseagreen; <br>
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Couleurs RGB</h4>
+                            <p>On peut choisir les couleurs en RGB. Une infinité de couleurs sont disponibles.</p>
+                            <div class="item rgb"></div>
+                            <p class="code">
+                                .item.rgb { <br>
+                                    background-color: rgb(255, 183, 50); <br>
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Couleurs RGBA</h4>
+                            <p>On peut ajouter de la transparence avec le A (alpha) après le RGB. En CSS, on peut aussi faire glisser le curseur à droite de la palette.</p>
+                            <div class="item rgba"></div>
+                            <p class="code">
+                                .item.rgba { <br>
+                                    background-color: rgba(146, 0, 169, 0.557); <br>
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Couleurs HEX</h4>
+                            <p>Et bien sûr, on peut choir les couleurs avec un code hexadécimal.</p>
+                            <div class="item hex"></div>
+                            <p class="code">
+                                .item.hex { <br>
+                                    background-color: #FF2D54; <br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_colors/Applying_color">En savoir plus</a>
+                </section>
+
+            </div>
+        </section>
+
+        <section id="d">
+            <header>
+                <h2>d</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Display</h3>
+                    <p>On utilise très souvent la propriété display. Elle permet de définir le type d'affichage, parfois sur l'élément lui même, parfois sur ses enfants.</p>
+                    <p>Il existe une multitude de valeurs pour display, voici les plus utilisées:</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Display Inline</h4>
+                            <p>display: inline fait qu'un élément s'affiche sur une même ligne. Il a une largeur qui ne dépasse pas son contenu.</p>
+                            <p class="code">p { <br>
+                                display: inline; <br>
+                            } <br>
+
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Display Block</h4>
+                            <p>display: block prend toute une ligne, même si le contenu est petit.</p>
+                            <p class="code">p { <br>
+                                display: block <br>
+                            } </p>
+                        </div>
+                        <div>
+                            <h4>Display None</h4>
+                            <p>display: none fait que l'élément ne s'affiche pas. Si on le compare avec visibility: hidden, il est vraiment absent alors que visibility:hidden est caché.</p>
+                            <p class="code">p { <br>
+                                display: none <br>
+                            } </p>
+                        </div>
+                        <div>
+                            <h4>Display Flex</h4>
+                            <p>
+                            display: flex transforme un conteneur en boîte flexible, permettant de disposer et d'aligner ses éléments enfants.</p>
+                            <p class="code">div { <br>
+                                display: flex <br>
+                            } </p>
+                        </div>
+                        <div>
+                            <h4>Display Grid</h4>
+                            <p>display: grid permet aussi de disposer les éléments enfants selon une grille.</p>
+                            <a href="#g">Grid</a>
+                            <p class="code">div { <br>
+                                display: grid <br>
+                            } </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/display">En savoir plus</a>
+                </section>
+
+            </div>
+        </section>
+
+        <section id="e">
+            <header>
+                <h2>e</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+        
+        <section id="f">
+            <header>
+                <h2>f</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Filters</h3>
+                    <p>La propriété CSS filter permet d'appliquer un filtre à une image, une icône, un arrière plan, une bordure ou autre. Pour cet exemple, on utilise des image en format SVG qui contiennent la class img-filter.</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Flou</h4>
+                            <img class="img-filter flou" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-02.svg" alt="dessin d'un enfant avec un filtre de flou">
+                            <p class="code">.img-filter {
+    filter: blur(3px);
+    }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Contraste</h4>
+                            <img class="img-filter contraste" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-03.svg" alt="dessin d'un enfant avec un filtre de contraste fort">
+                            <p class="code">
+.img-filter {
+    filter: contrast(200%);
+    }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Gris</h4>
+                            <img class="img-filter gris" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-04.svg" alt="dessin d'un enfant avec un filtre de gris">
+                            <p class="code">
+.img-filter {
+    filter: greyscale(80%);
+    }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Couleurs inversées</h4>
+                            <img class="img-filter inverse" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-05.svg" alt="dessin d'un enfant avec un filtre de couleurs inversées">
+                            <p class="code">
+.img-filter {
+    filter: hue-rotate(90deg);
+    }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Ombre portée</h4>
+                            <img class="img-filter ombre" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-06.svg" alt="dessin d'un enfant avec un filtre d'ombre'">
+                            <p class="code">
+.img-filter {
+    filter: drop-shadow(5px 5px rgb(123, 123, 123));
+    }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Sépia</h4>
+                            <img class="img-filter sepia" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-07.svg" alt="dessin d'un enfant avec un filtre sepia">
+                            <p class="code">
+.img-filter {
+    filter: sepia(80%);
+    }
+                                </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/SVG/Tutorial/Filter_effects">En savoir plus</a>
+                </section>
+            </div>
+        </section>
+
+        <section id="g">
+            <header>
+                <h2>g</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Gradient</h3>
+                    <p>Grace à CSS, on peut appliquer des dégradés de plusieurs sortes. Dans ces exemples, on l'applique à une div qui comporte la class gradient.</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Dégradé linéaire</h4>
+                            <div class="item gradient1"></div>
+                            <p class="code">
+                                .gradient { <br>
+                                    background: linear-gradient(blue, purple); <br>
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Dégradé radial</h4>
+                            <div class="item gradient2"></div>
+                            <p class="code">
+                                .gradient { <br>
+                                    background: radial-gradient(red, yellow); <br>
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Dégradé répétitif</h4>
+                            <div class="item gradient3"></div>
+                            <p class="code">
+                                .gradient { <br>
+                                    background: repeating-radial-gradient(green, orange 30px); <br>
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Dégradé cônique</h4>
+                            <div class="item gradient4"></div>
+                            <p class="code">
+                                .gradient { <br>
+                                    background: conic-gradient(yellow, purple); <br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/gradient">En savoir plus</a>
+                </section>
+                <section class="propriete">
+                    <h3>Grid</h3>
+                    <p>La grille permet de positionner les éléments d'une page grace à une grille. Elle fonctionne avec la propriété display. Pour cet exemple très simple, on utilise la class .container sur le container parent et .item-grid sur le container enfant. </p>
+                    <p>Chaque section de ce site est d'ailleurs affichée grace à cette propriété. C'est une bonne méthode à utiliser avec les media queries pour changer l'interface en fonction de la taille des écrans.</p>
+                    <p class="code large">Le code de l'item est toujours le même: <br>.item { <br>
+                        width: 50px; <br>
+                        height: 50px; <br>
+                        background-color: purple; <br>
+                        border-radius: 4px;
+                    }</p>
+                    <div class="grid">
+
+                        <div>
+                            <h4>Trois colones</h4>
+                            <div class="container-3">
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                                <div class="item-grid"></div>
+                            </div>
+                            <p class="code">
+                                .container { <br>
+                                    background-color: yellow; <br>
+                                    border-radius: 4px; <br>
+                                    gap: 0.5rem; <br>
+                                    padding: 0.5rem; <br>
+                                    display: grid; <br>
+                                    grid-template-columns: repeat(3, 1fr); <br>
+                                }
+                            </p>
+                        </div>
+
+                        <div>
+                            <div>
+                                <h4>Quatre colones</h4>
+                                <div class="container-4">
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                </div>
+                                <p class="code">
+                                    .container { <br>
+                                        background-color: yellow; <br>
+                                        border-radius: 4px; <br>
+                                        gap: 0.5rem; <br>
+                                        padding: 0.5rem; <br>
+                                        display: grid; <br>
+                                        grid-template-columns: repeat(4, 1fr); <br>
+                                    }
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <h4>Six colones</h4>
+                                <div class="container-6">
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                    <div class="item-grid"></div>
+                                </div>
+                                <p class="code">
+                                    .container { <br>
+                                        background-color: yellow; <br>
+                                        border-radius: 4px; <br>
+                                        gap: 0.5rem; <br>
+                                        padding: 0.5rem; <br>
+                                        display: grid; <br>
+                                        grid-template-columns: repeat(6, 1fr); <br>
+                                    }
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/grid">En savoir plus</a>
+                </section>
+            </div>
+        </section>
+
+        <section id="h">
+            <header>
+                <h2>h</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="i">
+            <header>
+                <h2>i</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="j">
+            <header>
+                <h2>j</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="k">
+            <header>
+                <h2>k</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="l">
+            <header>
+                <h2>l</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="m">
+            <header>
+                <h2>m</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Mix-blend Mode</h3>
+                    <p>La propriété mix-blend-mode définit la façon dont le contenu d'un élément doit se mélanger avec son arrière-plan. Elle agit un peu comme un filtre. Il existe beaucoup de valeurs différentes possibles.</p>
+                    <p>Pour ces exemples, on a appliqué une image de fond à une div et une couleur au texte à l'interieur de la div. On applique la propriété sur le texte.</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Darken</h4>
+                            <p>Garde les tons foncés de chaque calque.</p>
+                            <div class="item large-lego">
+                                <p class="darken">Darken</p>
+                            </div>
+                            <p class="code">
+                                p.darken { <br>
+                                    mix-blend-mode: darken; <br>
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Difference</h4>
+                            <p>Soustrait la valeur du calque de fond de la valeur du calque du dessus.</p>
+                            <div class="item large-lego"> 
+                                <p class="difference">Difference</p>
+                            </div>
+                            <p class="code">
+                                p.difference { <br>
+                                    mix-blend-mode: difference; <br>
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Multiply</h4>
+                            <p>Multiplie la valeur de chaque pixel correspondant entre  le calque du dessous et celui du dessus.</p>
+                            <div class="item large-lego">
+                                <p class="multiply">Multiply</p>
+                            </div>
+                            <p class="code">
+                                p.multiply { <br>
+                                    mix-blend-mode: multiply; <br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/mix-blend-mode">En savoir plus</a>
+                </section>
+
+            </div>
+        </section>
+
+        <section id="n">
+            <header>
+                <h2>n</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="o">
+            <header>
+                <h2>o</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Opacité</h3>
+                    <p>La propriété "opacity" définit la transparence d'un élément. Dans cet exemple, on l'applique à une div qui contient la class item.</p>
+                    <div class="grid">
+                        <div>
+                            <h4>100%</h4>
+                            <div class="item opacity100"></div>
+                            <p class="code">.item { <br>
+                                opacity: 1; <br>
+                            }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>50%</h4>
+                            <div class="item opacity50"></div>
+                            <p class="code">.item { <br>
+                                opacity: 0.5; <br>
+                            }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>10%</h4>
+                            <div class="item opacity10"></div>
+                            <p class="code">.item { <br>
+                                opacity: 0.1; <br>
+                            }
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/opacity">En savoir plus</a>
+                </section>
+
+            </div>
+        </section>
+
+        <section id="p">
+            <header>
+                <h2>p</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Picture</h3>
+                    <p>La balise picture est très utile pour le côté responsive. Elle sert à changer l'image en fonction de la taille de l'écran. On peut, par exemple, changer une image de format portait (mobile) pour paysage (desktop) ou simplement pour charger une image moins lourde pour un petit écran. </p>
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="https://picsum.photos/id/739/640/400" alt="Photo d'une grande roue">
+                        <source media="(min-width: 768px)" srcset="https://picsum.photos/id/401/450/300" alt="Photo d'une montgolfière">
+                        <img src="https://picsum.photos/id/146/200/300" alt="Photo d'un tricycle">
+                    </picture>
+                    <pre class="code large">
+&lt;picture
+    &lt;source media="(min-width: 1024px)" srcset="url">
+    &lt;source media="(min-width: 768px)" srcset="url">
+    &lt;img src="url" alt="text">
+&lt;/picture>
+                    </pre>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/picture">En savoir plus</a>
+                </section>
+
+            </div>
+        </section>
+
+        <section id="q">
+            <header>
+                <h2>q</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="r">
+            <header>
+                <h2>r</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="s">
+            <header>
+                <h2>s</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="t">
+            <header>
+                <h2>t</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Transform</h3>
+                    <p>La propriété Transform permet de transformer un élément grace au CSS. Dans nos exemples, la forme initiale est un carré bleu aux coins arrindis. Il contient la class item. Voici quelques transformations:</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Pivoter</h4>
+                            <div class="item rotate">
+                            </div>
+                            <p class="code">.item {
+transform: rotate(45deg);
+}
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Modifier l'échelle</h4>
+                            <div class="item scale">
+                            </div>
+                            <p class="code">.item {
+transform: scale(0.7);
+}
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Incliner</h4>
+                            <div class="item skew"></div>
+                            <p class="code">.item {
+transform: skew(45deg);
+}
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Ajuster les propriétés sur l'axe des Y seulement</h4>
+                            <div class="item skew-y"></div>
+                            <p class="code">.item {
+transform: skewY(20deg);
+}
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Étirer une forme</h4>
+                            <div class="item scale-x"></div>
+                            <p class="code">.item {
+transform: scaleX(2);
+}
+                                </p>
+                        </div>
+                        <div>
+                            <h4>En bref, créer n'importe quoi !</h4>
+                            <div class="item all"></div>
+                            <p class="code">.item {
+border-radius: 50px;
+transform: rotate(90deg) scaleY(1.5) skewY(40deg)
+}
+                                </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform">En savoir plus</a>
+
+                </section>
+                <section class="propriete">
+                    <h3>Transition</h3>
+                    <p>Les transistions permettent de modifier la vitesse d'une animation, y compris des animations implicites telles que le survol.</p>
+                    <p>La propriété "transition" est une propriété raccourcie de "transition-property" et "transition-duration". On peut aussi ajouter des valeurs qui vont impacter le délai et la temporalisation.</p>
+                    <p>Voici quelques exemples :</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Sur du texte</h4>
+                            <p class="transition1">Survole moi</p>
+                            <p class="code">.transition { <br>
+                                color: red;
+                                transition-property: font-size, color; <br>
+                                transition-duration: 2s; <br>
+                                }
+                            <br> <br>
+                            .transition:hover { <br>
+                                font-size: 30px; <br>
+                                color: blue; <br>
+                            }</p>
+                        </div>
+
+                        <div>
+                            <h4>Sur une forme</h4>
+                            <div class="item transition2">Survole moi</div>
+                            <p class="code">.transition { <br>
+                                transition: <br>
+                                width 1s, <br>
+                                height 2s, <br>
+                                background-color 3s, <br>
+                                border-radius 1s <br>
+                            } <br> <br>
+                                .transition:hover { <br>
+                                    width: 120px; <br>
+                                    height: 100px; <br>
+                                    background-color: var(--yellow); <br>
+                                    border-radius: 500px; <br>
+                                }
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Avec du délai</h4>
+                            <p class="transition3">Survole moi</p>
+                            <p class="code">.transition { <br>
+                                color: red; <br>
+                                transition: all 2s ease-in-out; <br>
+                                transition-delay: 1s; <br>
+                                } <br> <br>
+                            
+                            .transition:hover, { <br>
+                                font-size: 30px; <br>
+                                background-color: purple; <br>
+                                color: white; <br>
+                                transform: rotate(180); <br>
+                            }</p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transition">En savoir plus</a>
+                </section>
+            </div>
+        </section>
+
+        <section id="u">
+            <header>
+                <h2>u</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="v">
+            <header>
+                <h2>v</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Variables</h3>
+                    <p>Les variables sont très utiles pour un gros projet. Il suffit de changer une fois la valeur pour qu'elle s'applique partout.</p>
+                    <div class="grid grid2">
+                        <div>
+                            <h4>Déclaration d'une variable</h4>
+                            <p>Pour définir une variable, on l'écrit au début notre ficher CSS. Pour cet exemple, on définit une variable de couleur.</p>
+                            <p class="code">--green: #71A167;</p>
+                        </div>
+                        <div>
+                            <h4>Utilisation</h4>
+                            <p>Pour l'utiliser plus tard dans le code, on l'écrit comme suivant:</p>
+                            <p class="code">background-color: var(--green);</p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Using_CSS_custom_properties">En savoir plus</a>
+                </section>
+            </div>
+        </section>
+
+        <section id="w">
+            <header>
+                <h2>w</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Writing Mode</h3>
+                    <p>La proriété writing mode permet d'écrire à l'horizontal, à la verticale, les lettre penchées ou droites. C'est surtout utile lorsqu'on écrit dans des langues étrangères.</p>
+                    <div class="grid grid2">
+                        <div>
+                            <h4>À la verticale</h4>
+                            <p>On peut ajouter lr ou rl après vertical. lr va alligner les lettre à gauche et rl à droite.</p>
+                            <p class="writing1">Je suis vertical</p>
+                            <p class="code">.writing1 { <br>
+                                writing-mode: vertical-lr; <br>
+                            }</p>
+                        </div>
+                        <div>
+                            <h4>À la verticale, lettres droites</h4>
+                            <p>Combiné avec la propriété text-orientation, le texte est vertical mais les lettres sont dans le bon sens.</p>
+                            <p class="writing2">Je suis vertical</p>
+                            <p class="code">.writing2 { <br>
+                                writing-mode: vertical-lr; <br>
+                                text-orientation: upright; <br>
+                            }</p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/writing-mode">En savoir plus</a>
+                </section>
+
+            </div>
+        </section>
+
+        <section id="x">
+            <header>
+                <h2>x</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="y">
+            <header>
+                <h2>y</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            <div class="div_section hidden">
+                <h2>Pas de contenu pour l'instant !</h2>
+            </div>
+        </section>
+
+        <section id="z">
+            <header>
+                <h2>z</h2>
+                <button class="btn_fleche_right" aria-label="ouvrir"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                <button class="btn_fleche_down hidden" aria-label="fermer"><i class="fa-solid fa-circle-chevron-down"></i></button>
+            </header>
+            <div class="div_section hidden">
+                <section class="propriete">
+                    <h3>Z-index</h3>
+                    <p>Le z-index permet de définir dans quel ordre les éléments sont affichés à l'écran, un peu comme des calques.</p>
+                    <p>Pour bien représenter cet exemple, les images se chevauchent grace à la propriété position.</p>
+                    <div class="grid">
+                        <div>
+                            <h4>Sans changement de z-index</h4>
+                            <p>Comme le garçon a lunettes est positionné en premier, il se retrouve naturellement derrière les autres.</p>
+                            <div id="img-z-index">
+                                <img id="garcon-lunette1" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-02.svg" alt="Dessin d'un garçon à lunettes">
+                                <img id="fille-blonde1" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-03.svg" alt="Dessin d'une fillette blonde.">
+                                <img id="garcon-roux1" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-04.svg" alt="Dessin d'un garçon aux cheveux roux.">
+                            </div>
+                            <p class="code">
+                                #garcon-lunette { <br>
+                                    position: relative; <br>
+                                    left: 0px; <br>
+                                } <br> <br>
+                                
+                                #fille-blonde { <br>
+                                    position: relative; <br>
+                                    left: -60px; <br>
+                                } <br> <br>
+                                
+                                #garcon-roux { <br>
+                                    position: relative; <br>
+                                    left: -120px; <br>
+                                }
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4>Z-index inversé</h4>
+                            <p>En modifiant le z-index des personnages, on va les placer dans l'ordre inverse. Le nombre le plus élevé est celui qui va se retrouver au premier plan.</p>
+                            <div id="img-z-index">
+                                <img id="garcon-lunette2" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-02.svg" alt="Dessin d'un garçon à lunettes">
+                                <img id="fille-blonde2" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-03.svg" alt="Dessin d'une fillette blonde.">
+                                <img id="garcon-roux2" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-04.svg" alt="Dessin d'un garçon aux cheveux roux.">
+                            </div>
+                            <p class="code">
+                                #garcon-lunette { <br>
+                                    position: relative; <br>
+                                    left: 0px; <br>
+                                    z-index: 3; <br>
+                                } <br> <br>
+                                
+                                #fille-blonde { <br>
+                                    position: relative; <br>
+                                    left: -60px; <br>
+                                    z-index: 2; <br>
+                                } <br> <br>
+                                
+                                #garcon-roux { <br>
+                                    position: relative; <br>
+                                    left: -120px; <br>
+                                    z-index: 1; <br>
+                                }
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4>Les filles devant !</h4>
+                            <p>On peut bien sûr mettre les filles en avant !!</p>
+                            <div id="img-z-index">
+                                <img id="garcon-lunette3" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-02.svg" alt="Dessin d'un garçon à lunettes">
+                                <img id="fille-blonde3" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-03.svg" alt="Dessin d'une fillette blonde.">
+                                <img id="garcon-roux3" src="./assets/img/vecteezy_free-kids-vector-headshots_138558-04.svg" alt="Dessin d'un garçon aux cheveux roux.">
+                            </div>
+                            <p class="code">
+                                #garcon-lunette { <br>
+                                    position: relative; <br>
+                                    left: 0px; <br>
+                                    z-index: 2; <br>
+                                } <br> <br>
+                                
+                                #fille-blonde { <br>
+                                    position: relative; <br>
+                                    left: -60px; <br>
+                                    z-index: 3; <br>
+                                } <br> <br>
+                                
+                                #garcon-roux { <br>
+                                    position: relative; <br>
+                                    left: -120px; <br>
+                                    z-index: 1; <br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/z-index">En savoir plus</a>
+                </section>
+
+            </div>
+        </section>
+
+        <a id="btn-up" class="hidden" aria-label="Haut de la page"><i class="fa-solid fa-circle-arrow-up" aria-hidden="true"></i></a>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>Clémentine Digout</p>
+            <p><time datetime="2024-05-01">Mai 2024</time></p>
+            <p>582 AGT LI</p>
+        </div>
+        <p>Sources des images: <a href="https://www.vecteezy.com/">Vecteezy</a>, <a href="https://picsum.photos/">Lorem Picsum</a>, <a href="https://unsplash.com/fr">Unsplash</a></p>
+        <p>Sources des informations: <a href="https://www.quackit.com/">Quackit</a>, <a href="https://developer.mozilla.org/fr/">MDN</a></p>
+    </footer>
+</body>
+</html>

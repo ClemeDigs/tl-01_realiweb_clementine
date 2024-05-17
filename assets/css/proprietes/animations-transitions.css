@@ -1,0 +1,90 @@
+.animate-rebond {
+    animation: bounce 1s ease-in-out infinite; 
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            left: -60px;
+        }
+        50% {
+            left: 60px;
+        }
+    }
+
+.animate-color {
+    animation: change-color 1s ease-in-out infinite; 
+    }
+
+    @keyframes change-color {
+        0%, 100% {
+            background-color: var(--blue);
+        }
+        50% {
+            background-color: var(--green);
+        }
+    }
+
+.animate-all {
+    animation: all-change 1s ease-in-out infinite; 
+    }
+
+    @keyframes all-change {
+        0%, 100% {
+            background-color: var(--blue);
+            opacity: 100%;
+            border-radius: 4px;
+            transform: rotate(0deg)
+        }
+        50% {
+            background-color: var(--red);
+            opacity: 20%;
+            border-radius: 100px;
+            transform: rotate(45deg)
+        }
+    }
+
+
+.transition1 {
+    color: var(--red);
+    transition-property: font-size, color;
+    transition-duration: 2s;
+    }
+
+.transition1:hover, .transition1:focus {
+    font-size: 30px;
+    color: var(--blue);
+}
+
+.transition2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    transition:
+    width 1s,
+    height 2s,
+    background-color 3s,
+    border-radius 1s
+}
+
+.transition2:hover, .transition2:focus {
+    width: 120px;
+    height: 100px;
+    background-color: var(--yellow);
+    border-radius: 500px;
+}
+
+.transition3 {
+    padding: 10px;
+    border-radius: 50px;
+    color: var(--red);
+    transition: all 2s ease-in-out;
+    transition-delay: 1s;
+    }
+
+.transition3:hover, .transition3:focus {
+    font-size: 30px;
+    background-color: var(--purple);
+    color: white;
+    transform: rotate(180);
+}

@@ -1,0 +1,33 @@
+
+.rotate {
+    transform: rotate(45deg);
+}
+
+.scale {
+    transform: scale(0.7);
+}
+
+.skew {
+    transform: skew(45deg);
+}
+
+.skew-y {
+    transform: skewY(20deg);
+}
+
+.scale-x {
+    transform: scaleX(2);
+}
+
+.all {
+    border-radius: 50px;
+    transform: rotate(90deg) scaleY(1.5) skewY(40deg)
+}
+
+.item.opacity50{
+    opacity: 0.5;
+}
+
+.item.opacity10{
+    opacity: 0.1;
+}
