@@ -1,5 +1,5 @@
 html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: 300px;
     scroll-behavior: smooth;
 }
 
@@ -15,4 +15,11 @@ body {
 
 .hidden {
     display: none;
+}
+
+@media screen and (min-width:1024px) {
+    
+    html {
+        scroll-padding-top: 100px;
+    }
 }

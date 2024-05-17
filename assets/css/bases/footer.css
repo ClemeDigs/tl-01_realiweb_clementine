@@ -9,8 +9,8 @@ footer {
 .footer {
     width: 80%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer a {
@@ -20,4 +20,12 @@ footer a {
 
 footer a:hover, footer a:focus {
     color: white;
+}
+
+@media screen and (min-width:1024px) {
+    
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
